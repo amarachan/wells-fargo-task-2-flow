@@ -2,7 +2,8 @@ package com.wellsfargo.counselor.entity;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 
@@ -16,14 +17,14 @@ public class Security {
     private String name;
     private String category;
     private String purchasePrice;
-    private Date purchaseDate;
+    private LocalDate purchaseDate;
     private String quantity;
 
     protected Security() {
 
     }
 
-    public Security(Portfolio portfolio, String name, String category, String purchasePrice, Date purchaseDate, String quantity) {
+    public Security(Portfolio portfolio, String name, String category, String purchasePrice, LocalDate purchaseDate, String quantity) {
         this.portfolio = portfolio;
         this.name = name;
         this.category = category;
@@ -64,11 +65,11 @@ public class Security {
         this.purchasePrice = purchasePrice;
     }
 
-    public Date getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(Date purchaseDate) {
+    public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 

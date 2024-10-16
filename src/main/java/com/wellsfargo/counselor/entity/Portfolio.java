@@ -14,15 +14,15 @@ public class Portfolio {
     private Client client;
 
     @Column(nullable = false)
-    private LocalDate creationDate;
+    private LocalDate createDate;
 
     protected Portfolio() {
 
     }
 
-    public Portfolio(Client client, LocalDate creationDate) {
+    public Portfolio(Client client, LocalDate createDate) {
         this.client = client;
-        this.creationDate = creationDate;
+        this.createDate = createDate;
     }
 
     public long getPortfolioId() {
@@ -38,11 +38,11 @@ public class Portfolio {
     }
 
     public LocalDate getCreationDate() {
-        return creationDate;
+        return createDate;
     }
 
     public void setCreationDate(LocalDate creationDate) {
-        this.creationDate = creationDate;
+        this.createDate = creationDate;
     }
 }
 
