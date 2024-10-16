@@ -9,7 +9,7 @@ public class Portfolio {
     @Id
     @GeneratedValue()
     private long portfolioId;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "clientId", nullable = false)
     private Client client;
 

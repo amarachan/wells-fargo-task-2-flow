@@ -11,7 +11,7 @@ public class Security {
     @Id
     @GeneratedValue()
     private long securityId;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "portfolioId", nullable = false)
     private  Portfolio portfolio;
     private String name;
